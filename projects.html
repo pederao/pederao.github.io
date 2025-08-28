@@ -120,9 +120,34 @@
 							<a href="https://microsoft.github.io/farmvibes-ai/docfiles/markdown/workflow_yaml/data_ingestion/spaceeye/spaceeye.html">
 							FarmVibes</a>.  The idea was to use neural attention to interpolate cloud-free patches to replace cloudy optical patches.
 							This closely resembles approaches that have used temporal interpolation to fill in missing data, but here we use radar 
-							data to guide the interpolation.  The system was trained on Sentinel-1 and Sentinel-2 data from the European Space Agency 
-							and was based on the summer internsip work of <a href="https://www.cis.upenn.edu/~mingminz/"> Mingmin Zhao</a>.  
+							data to guide the interpolation.  The system was trained on 
+							<a href="https://planetarycomputer.microsoft.com/dataset/group/sentinel-1"> Sentinel-1</a> and 
+							<a href="https://planetarycomputer.microsoft.com/dataset/sentinel-2-l2a"> Sentinel-2</a> data
+							from the European Space Agency (via the Microsoft Planetary Computer).  The project was based on 
+							the summer internsip work of <a href="https://www.cis.upenn.edu/~mingminz/"> Mingmin Zhao</a>.  
 							The published paper is available here: <a href="https://ieeexplore.ieee.org/document/10025762"> Seeing through clouds in satellite images.</a>
+						</p>
+						<p>Here are some example applications of SpaceEye:</p>
+						<div class="container" align="center">
+							<ol>
+								<li>
+									Calculating vegetation indices (NDVI and NDWI) from cloudy images:<br>
+									<a href="#" class="image-fit"><img src="images/quincy_indices.jpg" height=250 alt=""/></a>
+								</li>
+								<li>
+									Change detection:<br>
+									<a href="#" class="change-detection"><img src="images/luther_derecho.jpg" height=250 alt=""/></a>
+								</li>
+								<li>
+									Wildfire damage assessment:<br>
+									<a href="#" class="wildfire-damage"><img src="images/bridgeport_nbr.jpg" height=250 alt=""/></a>
+								</li>
+							</ol>
+
+						</div>
+
+								
+
 						</p>
 					</header>
 

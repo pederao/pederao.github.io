@@ -36,7 +36,7 @@
 							>
 						</li>
 						<li>
-							<a href="#portfolio" id="lasr-link"
+							<a href="#lasr" id="lasr-link"
 								><span class="icon solid fa-bolt"> Super Resolution</span></a
 							>
 						</li>
@@ -129,33 +129,42 @@
 							The published paper is available here: <a href="https://ieeexplore.ieee.org/document/10025762"> Seeing through clouds in satellite images.</a>
 						</p>
 						<p>Here are some example applications of SpaceEye:</p>
-						<div class="container" align="center">
-							<ol>
-								<li>
-									Calculating vegetation indices (NDVI and NDWI) from cloudy images:<br>
-									<a href="#" class="image-fit"><img src="images/quincy_indices.jpg" height=250 alt=""/></a>
-								</li>
-								<li>
-									Change detection:<br>
-									<a href="#" class="change-detection"><img src="images/luther_derecho.jpg" height=250 alt=""/></a>
-								</li>
-								<li>
-									Wildfire damage assessment:<br>
-									<a href="#" class="wildfire-damage"><img src="images/bridgeport_nbr.jpg" height=250 alt=""/></a>
-								</li>
-							</ol>
-						</div>
+						<figure> 
+							<img src="images/quincy_indices.jpg" width="600" alt="NDVI"/>
+							<figcaption>
+								Calculating vegetation indices (NDVI and NDWI) from cloudy images
+							</figcaption>
+						</figure>
+						<figure> 
+							<img src="images/luther_derecho.jpg" width="600" alt="change"/>
+							<figcaption> 
+								Change detection
+							</figcaption>
+						</figure>
+						<figure> 
+							<img src="images/bridgeport_nbr.jpg" width="300" alt="NBR"/>
+							<figcaption> 
+								Wildfire damage assessment
+							</figcaption>
+						</figure>
 						<p>
 							A video demonstration of the system can be found 
 							<a href="https://youtu.be/FBCUPqFozfA"> here</a>.  In an earlier research project at IBM we 
 							implemented a sophisticated nuclearn norm based interpolation version for cloud removal in daily 
-							<a href="https://planetarycomputer.microsoft.com/dataset/modis-11A2-061"> MODIS</a> images.  That 
+							<a href="https://terra.nasa.gov/"> MODIS</a> images.  That 
 							system has the potential to be as accurate, but is slower and the implementation 
 							used a very poor quality cloud detector.  The following video shows a year worth of MODIS images for 
 							the entire contiguous United States (the black region is not covered by TERRA MODIS). 
 						</p>
-						<video height="400" src="movies/mixed.mp4" controls>
-						</video>
+						
+						<figure> 
+							<video height="400" src="movies/mixed.mp4" controls></video>
+							<figcaption> 
+								Daily cloudfree MODIS images for the contiguous United States.  The left panel shows the original
+								MODIS images, the right panel shows the MODIS images with clouds removed,
+							</figcaption>
+						</figure>
+						
 					</header>
 
 					<!-- <footer>
@@ -164,8 +173,42 @@
 				</div>
 			</section>
 
+			<section id="lasr" class="two">
+				<div class="container">
+					<header>
+						<h2 class="alt">
+							<strong>Location Aware Super Resolution</strong>
+						</h2>
+						<p>
+							Using satellite images for precision farming is hampered by two issues.  
+							<ol type="i">
+								<li>The presence of clouds and other atmospheric noise sources.</li>
+								<li>The low spatial resolution of freely available satellite images.</li>
+							</ol>
+							With Project SpaceEye we attempted to address the first issue and in this project
+							we used historical high resolution imagery to increase the resolution at a particular location.
+							Part of the idea was that super-resolution with side information (location) is easier than
+							blind super-resolution.  The project was done in collaboration with Olaoluwa Adigun and Ranveer 
+							Chandra at Microsoft Research.  The published paper is available from 
+							<a href="https://ieeexplore.ieee.org/document/9884391"> the IGARSS 2022 proceedings </a>.
+							The paper used Sentinel-2 as a free low-resolution image source and Pleiades as a 
+							high-resolution image source.  Special thanks to Airbus for providing the Pleiades data.
+						</p>
+
+						<figure> <img src="images/lasr_collage.jpg" alt=""/>
+						<figcaption> Example of Location Aware Super Resolution (LASR) using Sentinel-2 and Pleiades images.  
+							Column 1: unseen ground truth, 2: Sentinel-2, 3-6: super-resolution methods 7-10: super-resolution 
+							with high resolution historical side information.  The LASR methods (7-10) are from our paper.
+						</figcaption>
+						</figure>
+					</header>
+				</div>
+			</section>
+
+
+
 			<!-- Speech Separation -->
-			<section id="separation" class="two">
+			<section id="separation" class="three">
 				<div class="container">
 					<header>
 						<h2>Single Microphone Speech Separation</h2>

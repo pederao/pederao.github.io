@@ -112,6 +112,16 @@ section {
 
 body {
 	line-height: 1;
+	counter-reset: figures;
+}
+
+figure figcaption::before {
+	counter-increment: figures;
+	font-size: 0.8em;
+	color: black;
+	margin-top: 0.5em;
+	text-align: center;
+	content: "Figure " counter(figures) ": ";
 }
 
 ol,

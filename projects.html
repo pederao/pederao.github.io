@@ -61,7 +61,7 @@
 							>
 						</li>
 						<li>
-							<a href="#contact" id="separation-link"
+							<a href="#separation" id="separation-link"
 								><span class="icon solid fa-microphone">Speech Separation</span></a
 							>
 						</li>
@@ -106,12 +106,11 @@
 		<!-- Main -->
 		<div id="main">
 			<!-- Intro -->
-			<section id="spaceeye" class="one dark cover">
+			<section id="spaceeye" class="three">
 				<div class="container">
 					<header>
 						<h2 class="alt">
 							<strong>Project SpaceEye</strong>
-							
 						</h2>
 						<p>
 							SpaceEye was a project to build a cloud removal system for satellite images 
@@ -123,7 +122,9 @@
 							data to guide the interpolation.  The system was trained on 
 							<a href="https://planetarycomputer.microsoft.com/dataset/group/sentinel-1"> Sentinel-1</a> and 
 							<a href="https://planetarycomputer.microsoft.com/dataset/sentinel-2-l2a"> Sentinel-2</a> data
-							from the European Space Agency (via the Microsoft Planetary Computer).  The project was based on 
+							from the European Space Agency (via 
+							<a href="https://planetarycomputer.microsoft.com/">Microsoft Planetary Computer</a>).  
+							The project was based on 
 							the summer internsip work of <a href="https://www.cis.upenn.edu/~mingminz/"> Mingmin Zhao</a>.  
 							The published paper is available here: <a href="https://ieeexplore.ieee.org/document/10025762"> Seeing through clouds in satellite images.</a>
 						</p>
@@ -143,11 +144,10 @@
 									<a href="#" class="wildfire-damage"><img src="images/bridgeport_nbr.jpg" height=250 alt=""/></a>
 								</li>
 							</ol>
-
 						</div>
-
-								
-
+						<p>
+							A video demonstration of the system can be found 
+							<a href="https://youtu.be/FBCUPqFozfA"> here</a>.
 						</p>
 					</header>
 
@@ -157,85 +157,181 @@
 				</div>
 			</section>
 
-			<!-- Portfolio -->
-			<section id="portfolio" class="two">
+			<!-- Speech Separation -->
+			<section id="separation" class="two">
 				<div class="container">
 					<header>
-						<h2>Select Research Projects</h2>
+						<h2>Single Microphone Speech Separation</h2>
 					</header>
 
-					<p>Here are some of my favorite research projects.</p>
+					<p>
+						This project was done at IBM research with Steven Rennie, John Hershey and Trausti Kristjanson 
+						in the era before neural networks ruled speech recognition.  
+						At the core the idea was to simply use a standard speech recognition system (HMM/GMM) to 
+						search through the cartesian product of each persons word-lattice.  For best performance we
+						used acoustic models specific to each speaker when feasible and a fast approximate search 
+						through the product graph.  For two speakers we used the Gharamani/Jordan factorial HMM 
+						algorithm and for more than two speakers loopy belief propagation.  The first example is from 
+						the ICSLP 2006 Speech Separation Challenge that used speech from a small grammar artificially 
+						mixed together.
+					</p>
 
 					<div class="row">
 						<div class="col-4 col-12-mobile">
 							<article class="item">
-								<a href="#" class="image fit"
-									><img src="images/spaceeye.jpg" alt="A cloud inpainting system"
-								/></a>
+								
+								<p class="image fit" >
+									<img src="images/spec_fm.png" alt="Mixed Audio Signal"/>
+								</p>
 								<header>
-									<h3>Cloud Inpainting</h3>
-								</header>
-							</article>
-							<article class="item">
-								<a href="#" class="image fit"
-									><img src="images/matDiff.jpg" height="200" alt="Matrix Derivative Rules"
-								/></a>
-								<header>
-									<h3>Matrix Derivatives: The box product</h3>
-								</header>
-							</article>
-						</div>
-						<div class="col-4 col-12-mobile">
-							<article class="item">
-								<a href="#" class="image fit"
-									><img src="images/lasr.jpg" alt=""
-								/></a>
-								<header>
-									<h3>Location Aware Super Resolution</h3>
-								</header>
-							</article>
-							<article class="item">
-								<a href="#" class="image fit"
-									><img src="images/paniclecounting.png" alt="A panicle counting system"
-								/></a>
-								<header>
-									<h3>Automated Phenotyping/Crowd Counting</h3>
+									<h3>
+										Female + Male audio (0dB mix):
+									</h3>
+									<button onclick="document.getElementById('audiomf').play()">
+										<b style="color:DarkBlue;"> Mixed Audio </b>
+									</button>
+									<audio id="audiomf" src="audio/mf_mix.mp3"></audio>
 								</header>
 							</article>
 						</div>
 						<div class="col-4 col-12-mobile">
 							<article class="item">
-								<a href="#" class="image fit"
-									><img src="images/precisionfarming.png" alt="Computer Vision for Agriculture"
-								/></a>
+								<p class="image fit">
+									<img src="images/spec_f.png" alt="Female Speaker"/>
+								</p>
 								<header>
-									<h3>Precision Farming</h3>
+									<h3>
+										Recognition + reconstruction for female speaker:
+									</h3>
+									<button onclick="document.getElementById('audiof').play();">
+										<b style="color:DarkRed;"> Bin green with F 7 now</b>
+									</button>
+									<audio id="audiof" src="audio/mf_mix_to_f.mp3"></audio>
 								</header>
 							</article>
+						</div>
+						<div class="col-4 col-12-mobile">
 							<article class="item">
-								<a href="#" class="image fit"
-									><img src="images/InSAR.jpg" alt="Measuring crop growth with radar"
-								/></a>
+								<p class="image fit">
+									<img src="images/spec_m.png" alt="Male Speaker"/>
+								</p>
 								<header>
-									<h3>Interferometric Synthetic Aperture Radar</h3>
+									<h3>
+										Recognition + reconstruction for male speaker:
+									</h3>
+									<button onclick="document.getElementById('audiom').play();">
+										<b style="color:DarkGreen;"> Lay white at X 8 soon</b>
+									</button>
+									<audio id="audiom" src="audio/mf_mix_to_m.mp3"></audio>
 								</header>
 							</article>
 						</div>
 					</div>
 
-					<p>A few more of my favorites.</p>
-					<div class="row">
+				<p> In the second example we attempted a full-fledged recognition of a real recording from the 
+					2008 primary presidential debate between then Senator Hillary Clinton and then Senator Barak Obama.  
+					This audio is full of noise (reverb, word-restarts, third speakers, etc/) and consists of natural 
+					speech.  It's therefore much harder and the reconstruction quality is not as good. </p>
+
+				<div class="row">
+					<div class="col-4 col-12-mobile">
+						<article class="item">
+							<header>
+								<button onclick="document.getElementById('audiocnn').play()">
+									<b style="color:DarkBlue;"> CNN Debate 2008 </b>
+								</button>
+								<audio id="audiocnn" src="audio/cnn.mp3"></audio>
+							</header>
+						</article>
+					</div>
+					<div class="col-4 col-12-mobile">
+						<article class="item">
+							<header>
+								<button onclick="document.getElementById('audioclinton').play();">
+									<b style="color:DarkRed;"> Then Senator Hillary Clinton</b>
+								</button>
+								<audio id="audioclinton" src="audio/clinton.mp3"></audio>
+							</header>
+						</article>
+					</div>
+					<div class="col-4 col-12-mobile">
+						<article class="item">
+							<header>
+								<button onclick="document.getElementById('audiom').play();">
+									<b style="color:DarkGreen;"> Then Senator Barack Obama</b>
+								</button>
+								<audio id="audiom" src="audio/obama.mp3"></audio>
+							</header>
+						</article>
+					</div>
+				</div>
+
+				<p> With the more constrained grammar we could even handle four speakers: </p>					
+
+				<div class="row">
+					<div class="col-4 col-12-mobile">
+						<article class="item">
+							<header>
+								<button onclick="document.getElementById('audiomix4').play()">
+										<b style="color:DarkBlue;"> Mix of four speakers </b>
+								</button>
+							<audio id="audiomix4" src="audio/mix4_all.mp3"></audio>
+							</header>
+							</article>
+						</div>
 						<div class="col-4 col-12-mobile">
 							<article class="item">
-								<a href="#" class="image fit"
-									><img src="images/spec_fm.png" alt="Single Microphone Speech Separation"
-								/></a>
 								<header>
-									<h3>Single Microphone Speech Separation</h3>
+									<button onclick="document.getElementById('mix41').play();">
+										<b style="color:DarkRed;"> Place white at D 0 soon</b>
+									</button>
+									<audio id="mix41" src="audio/mix4_1.mp3"></audio>
+								</header>
+							</article>
+						</div>
+						<div class="col-4 col-12-mobile">
+							<article class="item">
+								<header>
+									<button onclick="document.getElementById('mix42').play();">
+										<b style="color:DarkGreen;"> Place red in H 3 now</b>
+									</button>
+									<audio id="mix42" src="audio/mix4_2.mp3"></audio>
 								</header>
 							</article>
 						</div>
 					</div>
+
+					<div class="row">
+					<div class="col-4 col-12-mobile">
+						<article class="item">
+							<header>
+								<h3> Speakers 3 and 4:</h3>
+							</header>
+							</article>
+						</div>
+						<div class="col-4 col-12-mobile">
+							<article class="item">
+								<header>
+									<button onclick="document.getElementById('mix43').play();">
+										<b style="color:Purple;"> Lay blue at P 0 now</b>
+									</button>
+									<audio id="mix43" src="audio/mix4_3.mp3"></audio>
+								</header>
+							</article>
+						</div>
+						<div class="col-4 col-12-mobile">
+							<article class="item">
+								<header>
+									<button onclick="document.getElementById('mix44').play();">
+										<b style="color:Maroon;"> Place green with B 8 soon</b>
+									</button>
+									<audio id="mix44" src="audio/mix4_4.mp3"></audio>
+								</header>
+							</article>
+						</div>
+					</div>
+
+
 				</div>
 			</section>
 
@@ -417,5 +513,12 @@
 		<script src="assets/js/breakpoints.min.js"></script>
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
+		<!-- JavaScript -- add at the bottom of your body tag -->
+		<script> 
+		function play(){
+			var audio = document.getElementById('audio')
+			audio.play();
+		}
+		</script>
 	</body>
 </html>

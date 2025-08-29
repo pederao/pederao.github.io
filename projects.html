@@ -41,7 +41,7 @@
 							>
 						</li>
 						<li>
-							<a href="#about" id="farming-link"
+							<a href="#farming" id="farming-link"
 								><span class="icon solid fa-seedling">Precision Farming</span></a
 							>
 						</li>
@@ -201,10 +201,96 @@
 							with high resolution historical side information.  The LASR methods (7-10) are from our paper.
 						</figcaption>
 						</figure>
+
+						<figure> 
+							<video src="movies/lasr_zoom.mp4" controls></video>
+							<figcaption> 
+								A video demonstrating the performance of LASR.  The second row represents traditional super-resolution
+								methods while the third row are LASR methods from our paper.  Take note of the improved image fidelity
+								at the >
+						</figure>highest zoom levels and the color accuracy at the lowest zoom levels.
+							</figcaption
+
+
 					</header>
 				</div>
 			</section>
 
+
+			<section id="farming" class="three">
+				<div class="container">
+					<header>
+						<h2 class="alt">
+							<strong>Learning to see more: Super-resolution for precision farming.</strong>
+						</h2>
+					</header>
+					<p>
+						Unfortunately, even the best super-resolution methods cannot increase the resolution 
+						reliably beyond a factor of 10.  For those precision farming applications that require
+						sub-meter resolution we therefore need a new approach.  Such an approach could be the traditional
+						one of flying drones over the fields, but that is expensive and not scalable.  In this project 
+						we considered firstly, the possibilty of extendinging the spectral resolution of the drone images
+						by fusing them with freely available multispectral satellite images.  Secondly, we considered 
+						temporal and spatial extension of the drone images by use of traditional super-resolution methods.
+					</p>
+
+					<figure> <img src="images/System_Diagram_Inference_lr.png" width=600 alt=""/>
+					<figcaption> Using targeted drone images we increase the spectral, spatial and temporal resolution 
+						by fusing with freely available satellite images.
+					</figcaption>
+					</figure>
+					<h3> Simulating cameras and satellite sensors</h3>
+					<p>
+					In order to train these systems we need high resolution images, but satellite sensors are sophisticated, 
+					expensive and existing datasets are at a low-resolution.  To get around this problem we simulate the 
+					sensors by using high resolution drone images and the published spectral response functions of the 
+					satellite sensors.  A farmer will be unable to afford a hyperspectral camera, but once spectral 
+					extension models are built he won't need one.  We used hyperspectral images collected by 
+					<a href="https://www.ars.usda.gov/"> USDA-ARS</a>. 
+					</p>
+					<figure> <img src="images/SpectralResponseSentinel2.png" width=600 alt=""/>
+					<figcaption> The normalized spectral response function published for Sentinel-2A and Sentinel-2B.
+					</figcaption>
+					</figure>
+
+					<h3> Image Registration</h3>
+					<p>
+					To fuse the drone and satellite images we need to take into account that Sentinel-2 images are at 
+					a 10m resolution and drone images are at a 2-15cm resolution.  This means that a single Sentinel-2 Pixel
+					corresponds to 80x80 drone pixels for a 12.5cm drone resolution.  To register the images we took a 
+					two-stage approach consisting of using the geospatial projection information to get close and then using 
+					regression to get the final alignment.  
+					</p>
+					<figure> <img src="images/Pixel_alignment_and_image_registration.png" width=600 alt=""/>
+					<figcaption> Our image registration approach.  Note the slight subtlety of having to align the upper-left
+						corner of the Sentinel-2 pixel with the corresponding upper-left corner of a drone pixel.  We estimated 
+						our final registration error to be approximately 0.81m (6.5 drone pixels or 0.08 Sentinel-2 pixels).
+					</figcaption>
+					</figure>	
+					<h3> Example Results</h3>
+					<p>
+						For spatial extension we target 1m resolution, and the resulting reconstructions are not perfect,
+						however, with spectral extension that has access to a high resolution drone images as side information 
+						the results are even good enough to use as ground truth for training spatial-extension 
+						super-resolution models. 
+					</p>
+					<figure> <img src="images/spatial_extension.png" width=600 alt=""/>
+					<figcaption> Spatial extension used for a cover crop application.  The second column shows the inference results.
+					</figcaption>
+					</figure>									
+					<figure> <img src="images/spectral_extension.png" width=600 alt=""/>
+					<figcaption> Spectral extension used for a cover crop application.  The third column shows the inference 
+						results.  These results are scale invariant and works equally well for drone images at 2cm or 15cm 
+						resolution, but are specific to the drone and satellite sensors used.
+					</figcaption>
+					</figure>
+					<figure> <img src="images/weed_exp.jpg" width=600 alt=""/>
+					<figcaption> Spectral extension used for to detect Italian ryegrass in wheat.  This experiment was done
+						with an early version of the spectral extension model that is available through FarmVibes. 
+					</figcaption>
+					</figure>
+				</div>
+			</section>
 
 
 			<!-- Speech Separation -->
@@ -385,165 +471,8 @@
 				</div>
 			</section>
 
-			<!-- About Me -->
-			<section id="about" class="three">
-				<div class="container">
-					<header>
-						<h2>Publications</h2>
-					</header>
 
-					<!-- <a href="#" class="image featured"
-						><img src="images/pic08.jpg" alt=""
-					/></a> -->
 
-					<p>
-						Here are some selected publications.  The full list of publications can be found on 
-						<a href="https://scholar.google.com/citations?user=jUjfnB0AAAAJ&hl=en">Google Scholar</a>.  The 
-						<a href="https://www.academia.edu/download/96218512/JAKO200923437148826.pdf">Olsen inequality</a> 
-						is from my PhD thesis.  My <a href="https://en.wikipedia.org/wiki/Erd%C5%91s_number">Erdős number</a>  
-						is 3 through 
-						<a href="https://en.wikipedia.org/wiki/Charles_Anthony_Micchelli"> Charles Micchelli</a> 
-						and <a href="https://en.wikipedia.org/wiki/Alan_J._Hoffman">Alan Hoffman</a>. 
-					</p>
-					<article class="item">
-						<header>
-							<h3>Satellite Images</h3>
-						</header>
-					<div class="container" align="left">
-						<ol>
-							<li>
-								Zhao, M., <b>Olsen, P.</b> and Chandra, R., (2023). 
-								<a href="https://ieeexplore.ieee.org/abstract/document/10025762"> Seeing through clouds in satellite images.</a>
-								<i> IEEE Transactions on Geoscience and Remote Sensing</i>, <b>61</b>, pp.1-16.
-							</li>
-							<li>
-								Adigun, O., <b>Olsen, P.A</b>. and Chandra, R., (2022).
-								<a href="https://ieeexplore.ieee.org/document/9884391">
-									Location Aware Super-Resolution for Satellite Data Fusion. 
-								</a>
-								<i>IGARSS 2022-2022 IEEE International Geoscience and Remote Sensing Symposium</i>, pp. 3758-3761. 
-							</li>
-							<li>
-								Wang, J., <b> Olsen, P.A.</b>, Conn, A.R. and Lozano, A.C., (2016).
-								<a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/app/S12-29.pdf">
-									Removing Clouds and Recovering Ground Observations in Satellite Image Sequences via 
-									Temporally Contiguous Robust Matrix Completion.
-								</a>
-									<i> Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition</i>, 
-									pp. 2754-2763.
-							</li>
-							<li>
-								Du, K., Cheng, Y., <b>Olsen, P.</b>, Noghabi, S., Chandra, R. and Jiang, J., 2024. 
-								<a href="https://arxiv.org/pdf/2403.11434">
-									Earth+: on-board satellite imagery compression leveraging historical earth observations.
-								</a>
-								arXiv preprint arXiv:2403.11434.
-							</li>
-							<li>
-								Capetz, M., Sharma, S., Padilha, R., <b>Olsen, P.</b>, Kiciman, E. and Chandra, R., (2024). 
-								<a href="https://arxiv.org/pdf/2411.16872">Enabling Adoption of Regenerative Agriculture through Soil Carbon Copilots,</a> 
-								<i>arXiv e-prints</i>, arXiv:2411.16872.
-							</li>
-							<li>
-								Busheska, A., Iyer, V., Silva, B., Olsen, P., Chandra, R. and Ranganathan, V., (2025).
-								<a href="https://dl.acm.org/doi/abs/10.1145/3708468.3715679">
-									TerraTrace-Spatio-Temporal Vegetation Signatures for Land Use Analytics.
-								</a> 
-								<i>Proceedings of the 26th International Workshop on Mobile Computing Systems and Application.</i>
-								pp. 123-123.
-							</li>
-						</ol>
-				</div>
-			</article>
-			<article class="item">
-				<header>
-					<h3>Automated Phenotyping</h3>
-				</header>
-				<div class="container" align="left">
-				<ol>
-					<li>
-						Oh, M.H., <b>Olsen, P.</b> and Ramamurthy, K.N., (2019). 
-						<a href="https://arxiv.org/pdf/1905.13291"> 
-							Counting and segmenting sorghum heads. 
-						</a>
-						<i>arXiv preprint</i>, arXiv:1905.13291.
-					</li>
-					<li>
-						Oh, M.H., <b>Olsen, P.</b> and Ramamurthy, K.N., (2020). 
-						<a href="https://aaai.org/ojs/index.php/AAAI/article/view/6852/6706">
-						Crowd counting with decomposed uncertainty.
-						</a>
-					 	<i>Proceedings of the AAAI conference on artificial intelligence</i> 
-						Vol. 34, <b>07</b>, pp. 11799-11806.
-					</li>
-					<li>
-						Bansal, I., <b>Olsen, P.</b> and Estevão, R., (2024). 
-						<a href="https://arxiv.org/pdf/2410.22554">
-							Remote Sensing for Weed Detection and Control.
-						</a>
-						<i> arXiv preprint</i>, arXiv:2410.22554.
-					</li>
-					<li>
-						Mantripragada, K., Adler, P.R., <b>Olsen, P.A.</b> and Qureshi, F.Z., (2023).
-						<a href="http://vclab.science.uoit.ca/pubs/23-igarss-paper.pdf">
-							An Iterative Method for Hyperspectral Pixel Unmixing Leveraging 
-							Latent Dirichlet Variational Autoencoder.
-						</a> 
-						<i>IGARSS 2023-2023 IEEE International Geoscience and Remote Sensing Symposium</i> pp. 7527-7530. 
-					</li>
-					<li>	
-						Morris, D.D., Shrote, R.Z., Tan, R., Newton, L., Goodwin, R.F., Bunting, E.L., Lipka, A.E., <b>Olsen, P.A.</b> and Thompson, A., 2022. 
-						<a href="https://essopenarchive.org/doi/full/10.1002/essoar.10508831.1">
-							Modeling canopy architecture traits using UAS-acquired LiDAR features in diverse maize varieties.
-						</a>	 
-						<i> Authorea Preprints.</i>
-					</li>
-				</ol>
-				</div>
-			</article>
-			<article class="item">
-				<header>
-					<h3>Machine Learning and Mathematics</h3>
-				</header>
-			<div class="container" align="left">
-				<ol>
-					<li>
-					</li>
-				</ol>
-				</div>
-			</article>
-			</section>
-
-			<!-- Contact -->
-			<section id="contact" class="four">
-				<div class="container">
-					<header>
-						<h2>Contact</h2>
-					</header>
-
-					<p>
-						If you need to get in touch with me please leave your contact
-						information and message below.
-					</p>
-
-					<form method="post" action="#">
-						<div class="row">
-							<div class="col-6 col-12-mobile">
-								<input type="text" name="name" placeholder="Name" />
-							</div>
-							<div class="col-6 col-12-mobile">
-								<input type="text" name="email" placeholder="Email" />
-							</div>
-							<div class="col-12">
-								<textarea name="message" placeholder="Message"></textarea>
-							</div>
-							<div class="col-12">
-								<input type="submit" value="Send Message" />
-							</div>
-						</div>
-					</form>
-				</div>
-			</section>
 		</div>
 
 		<!-- Footer -->

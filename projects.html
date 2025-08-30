@@ -299,7 +299,10 @@
 							<strong>Phenotyping through object counting</strong>
 						</h2>
 					</header>
+					<h3> The image density map</h3>
 					<p>
+						This work was a collaboration with <a href="https://minoh.io/">Min-hwan Oh</a> and 
+						<a href="https://nrkarthikeyan.github.io/">Karthikeyan Natesan Ramamurthy</a>.
 						We start by noting that the traditional approach to counting objects in images by identifying
 						and segmenting each object is difficult and not the best approach.  The modern approach uses instead 
 						a concept introduced by Victor Lempitsky and 
@@ -308,8 +311,45 @@
 						image density map concept a neural network can be trained with very little annotated data, and the 
 						annotation process itself simply requires a single mouse click per object.
 					</p>
+					<figure> <img src="images/dot.jpg" width="80%" alt=""/>
+					<figcaption> An image density map derived from a dot annotation of the objects to be counted.  
+						The objects we are counting here are sorghum heads (panicles).  
+					</figcaption>
+					</figure>
+					<h3> Crowd counting</h3>
+					<p>
+						Traditional research papers on object counting are typically focused on counting people in 
+						images of crowds.  In order to see how well we can measure up against the state-of-the-art we
+						developed a new method and evaluated it on several standard crowd counting datasets.  Our method
+						estimated not only the density map, but also the epistemic and aleatoric uncertainty in the 
+						estimated count.  Our paper 
+						<a href="https://ojs.aaai.org/index.php/AAAI/article/view/6852/6706">Crowd Counting with Uncertainty</a> 
+						was published at AAAI 2020.
+					</p>
+					<figure> <img src="images/UCF-QNRF_results.jpg" width="90%" alt=""/>
+					<figcaption> An example crowd count from the UCF dataset using the method from our AAAI paper.  
+					</figcaption>
+					</figure>
+					<h3> Counting Sorghum Panicles</h3>
+					For phenotyping applications we can amend the crowd counting methods with agronomical knowledge.
+					In the case of sorghum panicles we used the growing degree days (GDD) as an additional channel in the image.
+					We also knew that the number of panicles would be strictly increasing over time barring any dramatic weather 
+					events, and we enforced this using isotonic regression on the time series of the count estimates.  This and more
+					is described in the arxiv preprint <a href="https://arxiv.org/pdf/1905.13291">Counting and segmenting sorghum heads</a>.
+					<figure> <img src="images/thermal.jpg" width="90%" alt=""/>
+					<figcaption> A panicle counting architecture that uses the growing degree days (GDD) as an additional input channel.  
+					</figcaption>
+					</figure>
+					<figure> <img src="images/panicle_samples.jpg" width="70%" alt=""/>
+					<figcaption> some example panicle images for different varieties of sorghum, note the large variation in size, shape and color.
+					</figcaption>
+					</figure>
 
-					
+					<h3> Annotating objects for object counting </h3>
+					We developed a QT based annotation tool that makes it easy to annotate objects for counting and annotated more than 
+					100,000 sorghum panicles in the process.  A video demonstration of the tool can be found 
+					<a href="https://youtu.be/WZYfhzx3Z6s"> here</a>. 
+
 				</div>
 			</section>
 

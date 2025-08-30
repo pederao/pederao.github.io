@@ -46,17 +46,17 @@
 							>
 						</li>
 						<li>
-							<a href="#contact" id="boxproduct-link"
-								><span class="icon solid fa-th">Matrix Derivatives</span></a
-							>
-						</li>						
-						<li>
-							<a href="#contact" id="counting-link"
+							<a href="#counting" id="counting-link"
 								><span class="icon solid fa-leaf">Phenotyping</span></a
 							>
 						</li>
 						<li>
-							<a href="#contact" id="insar-link"
+							<a href="#boxproduct" id="boxproduct-link"
+								><span class="icon solid fa-th">Matrix Derivatives</span></a
+							>
+						</li>						
+						<li>
+							<a href="#insar" id="insar-link"
 								><span class="icon solid fa-satellite-dish">InSAR</span></a
 							>
 						</li>
@@ -130,19 +130,19 @@
 						</p>
 						<p>Here are some example applications of SpaceEye:</p>
 						<figure> 
-							<img src="images/quincy_indices.jpg" width="600" alt="NDVI"/>
+							<img src="images/quincy_indices.jpg" width="60%" alt="NDVI"/>
 							<figcaption>
 								Calculating vegetation indices (NDVI and NDWI) from cloudy images
 							</figcaption>
 						</figure>
 						<figure> 
-							<img src="images/luther_derecho.jpg" width="600" alt="change"/>
+							<img src="images/luther_derecho.jpg" width="60%" alt="change"/>
 							<figcaption> 
 								Change detection
 							</figcaption>
 						</figure>
 						<figure> 
-							<img src="images/bridgeport_nbr.jpg" width="300" alt="NBR"/>
+							<img src="images/bridgeport_nbr.jpg" width="30%" alt="NBR"/>
 							<figcaption> 
 								Wildfire damage assessment
 							</figcaption>
@@ -158,7 +158,7 @@
 						</p>
 						
 						<figure> 
-							<video height="400" src="movies/mixed.mp4" controls></video>
+							<video width="90%" src="movies/mixed.mp4" controls></video>
 							<figcaption> 
 								Daily cloudfree MODIS images for the contiguous United States.  The left panel shows the original
 								MODIS images, the right panel shows the MODIS images with clouds removed,
@@ -195,7 +195,7 @@
 							high-resolution image source.  Special thanks to Airbus for providing the Pleiades data.
 						</p>
 
-						<figure> <img src="images/lasr_collage.jpg" alt=""/>
+						<figure> <img src="images/lasr_collage.jpg" width="70%" alt=""/>
 						<figcaption> Example of Location Aware Super Resolution (LASR) using Sentinel-2 and Pleiades images.  
 							Column 1: unseen ground truth, 2: Sentinel-2, 3-6: super-resolution methods 7-10: super-resolution 
 							with high resolution historical side information.  The LASR methods (7-10) are from our paper.
@@ -203,7 +203,7 @@
 						</figure>
 
 						<figure> 
-							<video src="movies/lasr_zoom.mp4" controls></video>
+							<video src="movies/lasr_zoom.mp4" width="60%" controls></video>
 							<figcaption> 
 								A video demonstrating the performance of LASR.  The second row represents traditional super-resolution
 								methods while the third row are LASR methods from our paper.  Take note of the improved image fidelity
@@ -221,7 +221,7 @@
 				<div class="container">
 					<header>
 						<h2 class="alt">
-							<strong>Learning to see more: Super-resolution for precision farming.</strong>
+							<strong>Learning to see more: Super-resolution for precision farming</strong>
 						</h2>
 					</header>
 					<p>
@@ -234,7 +234,7 @@
 						temporal and spatial extension of the drone images by use of traditional super-resolution methods.
 					</p>
 
-					<figure> <img src="images/System_Diagram_Inference_lr.png" width=600 alt=""/>
+					<figure> <img src="images/System_Diagram_Inference_lr.png" width="60%" alt=""/>
 					<figcaption> Using targeted drone images we increase the spectral, spatial and temporal resolution 
 						by fusing with freely available satellite images.
 					</figcaption>
@@ -248,7 +248,7 @@
 					extension models are built he won't need one.  We used hyperspectral images collected by 
 					<a href="https://www.ars.usda.gov/"> USDA-ARS</a>. 
 					</p>
-					<figure> <img src="images/SpectralResponseSentinel2.png" width=600 alt=""/>
+					<figure> <img src="images/SpectralResponseSentinel2.png" width="60%" alt=""/>
 					<figcaption> The normalized spectral response function published for Sentinel-2A and Sentinel-2B.
 					</figcaption>
 					</figure>
@@ -261,7 +261,7 @@
 					two-stage approach consisting of using the geospatial projection information to get close and then using 
 					regression to get the final alignment.  
 					</p>
-					<figure> <img src="images/Pixel_alignment_and_image_registration.png" width=600 alt=""/>
+					<figure> <img src="images/Pixel_alignment_and_image_registration.png" width="60%" alt=""/>
 					<figcaption> Our image registration approach.  Note the slight subtlety of having to align the upper-left
 						corner of the Sentinel-2 pixel with the corresponding upper-left corner of a drone pixel.  We estimated 
 						our final registration error to be approximately 0.81m (6.5 drone pixels or 0.08 Sentinel-2 pixels).
@@ -274,17 +274,17 @@
 						the results are even good enough to use as ground truth for training spatial-extension 
 						super-resolution models. 
 					</p>
-					<figure> <img src="images/spatial_extension.png" width=600 alt=""/>
+					<figure> <img src="images/spatial_extension.png" width="80%" alt=""/>
 					<figcaption> Spatial extension used for a cover crop application.  The second column shows the inference results.
 					</figcaption>
 					</figure>									
-					<figure> <img src="images/spectral_extension.png" width=600 alt=""/>
+					<figure> <img src="images/spectral_extension.png" width="80%" alt=""/>
 					<figcaption> Spectral extension used for a cover crop application.  The third column shows the inference 
 						results.  These results are scale invariant and works equally well for drone images at 2cm or 15cm 
 						resolution, but are specific to the drone and satellite sensors used.
 					</figcaption>
 					</figure>
-					<figure> <img src="images/weed_exp.jpg" width=600 alt=""/>
+					<figure> <img src="images/weed_exp.jpg" width="80%" alt=""/>
 					<figcaption> Spectral extension used for to detect Italian ryegrass in wheat.  This experiment was done
 						with an early version of the spectral extension model that is available through FarmVibes. 
 					</figcaption>
@@ -292,6 +292,26 @@
 				</div>
 			</section>
 
+			<section id="counting" class="two">
+				<div class="container">
+					<header>
+						<h2 class="alt">
+							<strong>Phenotyping through object counting</strong>
+						</h2>
+					</header>
+					<p>
+						We start by noting that the traditional approach to counting objects in images by identifying
+						and segmenting each object is difficult and not the best approach.  The modern approach uses instead 
+						a concept introduced by Victor Lempitsky and 
+						<a href="https://www.robots.ox.ac.uk/~az/"> Andrew Zisserman</a> in 2010 called the 
+						<em>image density map</em> where each object is replaced by a density blob that sums to 1.  With the 
+						image density map concept a neural network can be trained with very little annotated data, and the 
+						annotation process itself simply requires a single mouse click per object.
+					</p>
+
+					
+				</div>
+			</section>
 
 			<!-- Speech Separation -->
 			<section id="separation" class="three">

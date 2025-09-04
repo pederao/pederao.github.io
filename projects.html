@@ -49,17 +49,17 @@
 							<a href="#counting" id="counting-link"
 								><span class="icon solid fa-leaf">Phenotyping</span></a
 							>
-						</li>
-						<li>
-							<a href="#boxproduct" id="boxproduct-link"
-								><span class="icon solid fa-th">Matrix Derivatives</span></a
-							>
-						</li>						
+						</li>					
 						<li>
 							<a href="#insar" id="insar-link"
 								><span class="icon solid fa-satellite-dish">InSAR</span></a
 							>
 						</li>
+						<li>
+							<a href="#boxproduct" id="boxproduct-link"
+								><span class="icon solid fa-th">Matrix Derivatives</span></a
+							>
+						</li>	
 						<li>
 							<a href="#separation" id="separation-link"
 								><span class="icon solid fa-microphone">Speech Separation</span></a
@@ -72,33 +72,14 @@
 			<div class="bottom">
 				<!-- Social Icons -->
 				<ul class="icons">
-					<li>
-						<a
-							href="https://math.stackexchange.com/users/59704/peder"
-							class="icon brands fa-stack-exchange"
-							><span class="label">Stack Exchange</span></a
-						>
-					</li>
-					<li>
-						<a href="#" class="icon solid fa-list-alt"
-							><span class="label">Facebook</span></a
-						>
-					</li>
-					<li>
-						<a href="https://github.com/pederao" class="icon brands fa-github"
-							><span class="label">Github</span></a
-						>
-					</li>
-					<li>
-						<a href="#" class="icon brands fa-dribbble"
-							><span class="label">Dribbble</span></a
-						>
-					</li>
-					<li>
-						<a href="#" class="icon solid fa-envelope"
-							><span class="label">Email</span></a
-						>
-					</li>
+					<li> <a href="resume/cv_short.pdf" class="icon solid fa-address-card"><span class="label">CV</span> </a></li>
+					<li> <a href="https://scholar.google.com/citations?user=jUjfnB0AAAAJ&hl=en" class="icon solid fa-book">
+						<span class="label">Google Scholar</span></a></li>
+					<li> <a href="https://github.com/pederao" class="icon brands fa-github"><span class="label">Github</span></a></li>
+					<li> <a href="https://math.stackexchange.com/users/59704/peder" class="icon brands fa-stack-exchange">
+						<span class="label">Stack Exchange</span></a></li>
+					<li><a href="https://lichess.org/@/pederao" class="icon solid fa-chess"><span class="label">lichess</span></a></li>
+					<li><a href="index.html#contact" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
 				</ul>
 			</div>
 		</div>
@@ -112,6 +93,10 @@
 						<h2 class="alt">
 							<strong>Project SpaceEye</strong>
 						</h2>
+						<p>	<blockquote>					
+						This work was a collaboration with Mingmin Zhao (Univ. of Pennsylvania), Ranveer Chandra (Microsoft), 
+						Roberto Estevao (Microsoft) as well as many others from Microsoft.</p>
+						</blockquote><p>
 						<p>
 							SpaceEye was a project to build a cloud removal system for satellite images 
 							using synthetic aperture radar to "see through clouds".  The system is available
@@ -149,7 +134,9 @@
 						</figure>
 						<p>
 							A video demonstration of the system can be found 
-							<a href="https://youtu.be/FBCUPqFozfA"> here</a>.  In an earlier research project at IBM we 
+							<a href="https://youtu.be/FBCUPqFozfA"> here</a>.  
+							
+							In an earlier research project at IBM Research (with Jialey Wang, Aurelie Lozano and Andy Conn) we 
 							implemented a sophisticated nuclearn norm based interpolation version for cloud removal in daily 
 							<a href="https://terra.nasa.gov/"> MODIS</a> images.  That 
 							system has the potential to be as accurate, but is slower and the implementation 
@@ -179,7 +166,10 @@
 						<h2 class="alt">
 							<strong>Location Aware Super Resolution</strong>
 						</h2>
-						<p>
+						<p>	<blockquote>					
+						This work was a collaboration with Olaoluwa Adigun (Univ. of Southern California, LA) and Ranveer Chandra (Microsoft).
+						</p>
+						</blockquote><p>						<p>
 							Using satellite images for precision farming is hampered by two issues.  
 							<ol type="i">
 								<li>The presence of clouds and other atmospheric noise sources.</li>
@@ -188,8 +178,8 @@
 							With Project SpaceEye we attempted to address the first issue and in this project
 							we used historical high resolution imagery to increase the resolution at a particular location.
 							Part of the idea was that super-resolution with side information (location) is easier than
-							blind super-resolution.  The project was done in collaboration with Olaoluwa Adigun and Ranveer 
-							Chandra at Microsoft Research.  The published paper is available from 
+							blind super-resolution.  The project was started during Olaoluwa's Microsoft summer internship in 
+							2020 and continued until we published a paper.  The article is available from 
 							<a href="https://ieeexplore.ieee.org/document/9884391"> the IGARSS 2022 proceedings </a>.
 							The paper used Sentinel-2 as a free low-resolution image source and Pleiades as a 
 							high-resolution image source.  Special thanks to Airbus for providing the Pleiades data.
@@ -207,9 +197,10 @@
 							<figcaption> 
 								A video demonstrating the performance of LASR.  The second row represents traditional super-resolution
 								methods while the third row are LASR methods from our paper.  Take note of the improved image fidelity
-								at the >
-						</figure>highest zoom levels and the color accuracy at the lowest zoom levels.
-							</figcaption
+								at the highest zoom levels and the color accuracy at the lowest zoom levels.
+							</figcaption>
+						</figure>
+							
 
 
 					</header>
@@ -224,7 +215,12 @@
 							<strong>Learning to see more: Super-resolution for precision farming</strong>
 						</h2>
 					</header>
-					<p>
+					<p>	<blockquote>					
+						This work was a collaboration with Arif Masrur (ESRI), Paul Adler (USDA-ARS), Matthew Myers (USDA-ARS),
+						Nathan Sedghi (Univ. of Maryland), Ray Weil (Univ. of Maryland), Carlan Jackson (Alabama A&M), 
+						Roberto Estevao (Microsoft) and Camilo Zuluaga (North Carolina State Univ.). </p>
+					</blockquote><p>
+
 						Unfortunately, even the best super-resolution methods cannot increase the resolution 
 						reliably beyond a factor of 10.  For those precision farming applications that require
 						sub-meter resolution we therefore need a new approach.  Such an approach could be the traditional
@@ -299,10 +295,16 @@
 							<strong>Phenotyping through object counting</strong>
 						</h2>
 					</header>
+					<p>	<blockquote>					
+						This work was a collaboration with <a href="https://minoh.io/">Min-hwan Oh</a> (Seoul National University) and 
+						<a href="https://nrkarthikeyan.github.io/">Karthikeyan Natesan Ramamurthy</a> (IBM Research), 
+						as well as
+						Javier Ribera (Purdue Univ.), Yuhao Chen (Purdue Univ.), Addie Thompson (now Michigan State Univ.), Ronny Luss (IBM Research), 
+						Mitch Tuinstra (Purdue Univ.) and Naoki Abe (IBM Research).
+						</p>
+						</blockquote><p>
 					<h3> The image density map</h3>
 					<p>
-						This work was a collaboration with <a href="https://minoh.io/">Min-hwan Oh</a> and 
-						<a href="https://nrkarthikeyan.github.io/">Karthikeyan Natesan Ramamurthy</a>.
 						We start by noting that the traditional approach to counting objects in images by identifying
 						and segmenting each object is difficult and not the best approach.  The modern approach uses instead 
 						a concept introduced by Victor Lempitsky and 
@@ -353,16 +355,266 @@
 				</div>
 			</section>
 
+
+			<section id="insar" class="two">
+				<div class="container">
+					<header>
+						<h2 class="alt">
+							<strong>Using InSAR for 3d agricultural insights</strong>
+						</h2>
+					</header>
+					<p>	<blockquote>					
+						This work was a collaboration with Debvrat Varshney (Oak Ridge National Library), Suraj Jog (Microsoft), 
+						Vaishnavi Ranganathan (Microsoft), Roberto Estevao(Microsoft), Zerina Kapetanovic(Stanford), Bodhi Priyantha(Microsoft), 
+						Ranveer Chandra (Microsoft).  This problem is no-where close to completion and has yet to produce positive results or 
+						a publication.
+						</p>
+						</blockquote>
+					
+						
+					<h3> What is Synthetic Aperture Radar? </h3>
+					<p>
+					Electro-optical imagery (EO) is the most common type of satellite imagery.  However, optical sensors suffer from 
+					clouds and other atmospheric disturbances.  Synthetic Aperture Radar (SAR) is an alternative type of sensor that
+					uses microwaves to illuminate the ground.  Microwaves can penetrate clouds and are therefore <em>not affected by weather</em>.  
+					Moreover, due to SAR using the movement of the satellite to create a large synthetic aperture that is proportional 
+					to the distance to the ground, the resolution of SAR images is thus <em>independent of the distance to the ground</em>.  
+					This means that SAR can be used to create as high resolution images from high orbits as can be obtained from an airplane!
+					Sentinel-1 is an example of a SAR radar that is freely available from the European Space Agency.  Sentinel-1 has a 
+					resolution of approximately \(5\mathrm{m}\times 20\mathrm{m}\).  For anyone interested in learning more about SAR, I heartily 
+					recomment the non-technical book 
+					<a href="https://www.amazon.com/Essentials-SAR-Conceptual-Remarkable-Capabilities/dp/B09CGKTLZV"> The Essentials of SAR</a> 
+					by Thomas P. Ager.
+					</p>
+
+					<h3> Interferometric Synthetic Aperture Radar </h3>
+					<p>
+						As great as all this sounds, SAR can do more, there is polarimetric SAR, interferometric SAR (InSAR) as well as tomoSAR
+						that can give information beyond the standard gray-scale SAR images.  In the words of 
+						<a href="https://www.research.ed.ac.uk/en/persons/iain-woodhouse"> Iain Woodhouse</a>
+						<blockquote> “SAR has a terrible history of being associated with seeing through clouds.”</blockquote>
+						In other words, we can do more than just see through clouds with SAR.  InSAR uses two or more SAR images to
+						estimate the distance to the ground.  This is possible because SAR measures both the amplitude and phase of the
+						returned microwaves.  By comparing the phase of two or more SAR images taken at different times, we can estimate
+						the changed in the distance to the ground.  This is useful for measuring ground subsidence, seismic activity and more, 
+						and is accurate to the order of a centimeter and in some cases millimeters depending on the microwave wavelength 
+						(e.g. X band).  
+						We believe InSAR is also useful for measuring the height of vegetation, but due to wind disturbance of the vegetation
+						and rapid growth rates, this problem may require a different approach than the traditional InSAR methods.
+					</p>
+
+					<p> The vision is to build a system that uses freely available data that can tell any farmer on the planet the height of 
+						the crops in his/her fields and send alerts when part of the field is under performing.  Of course, the same would go 
+						for foresters and other land managers.  Needless to say, we have not solved this probelm, but I believe it is possible.
+					</p>
+
+					<h3> GMTSAR: Hello World! </h3>
+					<p>
+						For this project we used the open source InSAR software	<a href="https://github.com/gmtsar/gmtsar"> GMTSAR</a>.
+						There is a <a href="http://topex.ucsd.edu/gmtsar/tar/sentinel_time_series_5.pdf"> documented procedure for 
+						Sentinel-1</a> data and their hello world example is measuring
+						ground movements as a result of volcanic activity on the Big Island of Hawaii.  We took this example and applied it 
+						to the volcanic eruption on Big Island in December 2022.  The following figure shows the resulting measured ground
+						movements as a result of the eruption between September 2022 and March 2023.  The colors represent the distance 
+						to the satellite relative to the ground position on 9/11/2022, so red means the ground moved closer and blue means 
+						the ground moved away.  
+					</p>
+					<figure> 
+						<video src="movies/insar_hawaii.mp4" width="60%" controls></video>
+						<figcaption> 
+								The video shows the measured ground movements on Big Island, Hawaii as a result of the volcanic eruption
+								between September 2022 and March 2023.  The accuracy of the estimated ground movements relative to GNSS
+								station ground truth is approximately 1cm (5.4mm for descending orbits and 13mm for ascending orbits).  
+								We used a set of the GNSS stations to correct for atmospheric 
+								noise and the remaining stations to validate the results.  
+						</figcaption>
+					</figure>
+					<p>  When the ground movement is significantly larger than the wavelength of the microwave signal (5.6cm for Sentinel-1's C-band radar)
+						the phase wrapping makes it difficult to estimate the actual ground movement.  This is the case for the 
+						lava that flowed from the volcano.  However, by using coherence change detection (CCD) we can map the magnitude of the changes without 
+						worrying about the actual distance.  The following is a comparison of the standard deviation of the CCD compared to the USGS 
+						of the lava flow.
+
+					</p>
+					<figure> 
+						<div class="row">
+							<div class="col-5 col-12-mobile">
+								<article class="item">
+									<p class="image fit" >
+										<img src="images/lava_map.png" alt="USGS map of the lava flow"/>
+									</p>
+								</article>
+							</div>
+							<div class="col-5 col-12-mobile">
+								<article class="item">
+									<p class="image fit">
+										<img src="images/lava_insar.png" alt="Coherence Change Detection"/>
+									</p>
+								</article>
+							</div>
+						</div>
+						<figcaption> 
+								Note how the lava flow is clearly visible in the coherence change detection (CCD) image on the right. 
+						</figcaption>
+					</figure>
+
+					<p> If we combine the ascending and descending orbits we can come a bit closer to a 3-dimensional picture of the 
+						ground movements.
+					</p>
+					
+					<figure> <img src="images/InSAR.jpg" width="70%" alt=""/>
+					<figcaption> 
+						In the following figure the ascending orbit corresponds to a northeasterly horizontal component of the 
+						ground movement while the descending orbit corresponds to a southwest-westly component.  By combining these two 
+						we can get a better idea of the 3-dimensional ground movement.  
+					</figcaption>
+					</figure>
+
+					<h3> Tilling detection </h3>
+					Here we show an example of using InSAR to detect tilling in agricultural fields.  The idea is that
+					tilling changes the surface structure of the soil and this is readily picked up by InSAR.  The figure below shows
+					a CCD image for a field.  The tilling itself may not even be visible in the optical image, but here we have information
+					from the farmer that verifies that the research plot was tilled in this time period.  In general tilling detection can be
+					quite difficult as growing crops also changes the surface structure, and thus in areas of multicropping it becomes 
+					necessary to rule out the precense of growing crops.  A preliminary approach to tilling detection was part of a 
+					larger study managed by Swati Sharma (Microsoft) on monitoring
+					<a href="https://arxiv.org/pdf/2411.16872"> soil carbon </a> content.  
+
+					<figure> 
+						<div class="row">
+							<div class="col-4 col-12-mobile">
+								<article class="item">
+									<p class="image fit" >
+										<img src="images/tilling_before.png" alt="CCD before"/>
+									</p>
+								</article>
+							</div>
+							<div class="col-4 col-12-mobile">
+								<article class="item">
+									<p class="image fit">
+										<img src="images/tilling after.png" alt="CCD after"/>
+									</p>
+								</article>
+							</div>
+						</div>
+						<figcaption> 
+								A coherence change detection (CCD) image for a field during and after tilling.  A dark pixel means change, 
+								while a light pixel means no change.  Notice how the yellow research plot was tilled between 3/24 and 4/5, 
+								but remains unchanged between 4/5 and 4/17.   
+						</figcaption>
+					</figure>
+
+					<h3> Measuring crop growth </h3>
+					<p>
+						The idea for measuring crop growth with InSAR is now to take the relevant inputs:
+						growth stage, weather, plus radar information such as PolSAR, Coherence, interferograms
+						from as many different radar bands as possible (<a href="https://www.esa.int/Applications/Observing_the_Earth/Copernicus/Sentinel-1">Sentinel-1</a> C-band, <a href="https://science.nasa.gov/mission/nisar/">NISAR</a> L-band) in order 
+						to overcome the issues with vegetation movement due to wind and rapid growth.  The figure below
+						shows a cartoon model for the process.  Note that we need high resolution ground truth which we get from 
+						LIDAR flights over the fields.  We have a few more tricks up our sleeve to make this work, that we will 
+						disclose once we have positive results.
+					</p>
+					<figure> <img src="images/insar_model.png" width="70%" alt=""/>
+					<figcaption> 
+						A cartoon model for measuring crop growth with InSAR.  
+					</figcaption>
+					</figure>
+					
+				</div>
+			</section>
+
+			<section id="boxproduct" class="three">
+				<div class="container">
+					<header>
+						<h2 class="alt">
+							<strong> The box product: Symbolic and automatix matrix differentiation</strong>
+						</h2>
+					</header>
+					<p>	<blockquote>					
+						This work was a collaboration with Steven J. Rennie (Pryon), Vaibhava Goel (Pryon), 
+						Gillian M Chin (Bloomberg) and Jorge Nocedal (Northwestern Univ.).
+						</p>
+						</blockquote>
+					<p>
+					<h3> The box product </h3>
+					For matrices \(\mathbf{A}\) and \(\mathbf{B}\)  with sizes \(m_1\times n_1\) and \(m_2\times n_2\) 
+					the box product \(\mathbf{A} \boxtimes \mathbf{B}\) is defined as
+					\[
+						(\mathbf{A} \boxtimes \mathbf{B})_{(i-1)m_2+j, (k-1)n_1+l} = 
+						(\mathbf{A} \boxtimes \mathbf{B})_{(ij)(kl)} \stackrel{\mathrm{def}}{=} 
+						a_{il} b_{jk}
+					\]
+					Contrast this with the Kronecker product \(\otimes\) defined as
+					\[
+						(\mathbf{A} \otimes \mathbf{B})_{(i-1)m_2+j, (k-1)n_1+l} = 
+						(\mathbf{A} \otimes \mathbf{B})_{(ij)(kl)} \stackrel{\mathrm{def}}{=} 
+						a_{ik} b_{jl}
+					\]
+					The box product plays nicely with the Kronecker product \(\otimes\) and the outer product, and together the three operations
+					can be used to express the derivative of any matrix expression using the normal operations.  The box product is the missing 
+					operation that enables a matrix calculus that is as easy to use as scalar calculus.  Of course matrix derivatives are already
+					computed readily using automatic differentiation in packages such as TensorFlow and PyTorch, but these packages do not
+					provide symbolic derivatives.  The box product makes it possible to compute symbolic derivatives of matrix expressions for use 
+					in for example your publications, and can also be used for deeper understanding in optimization problems.
+
+					<figure> <img src="images/boxproduct.png" width="50%" alt=""/>
+					<figcaption> 
+						Two example matrices and their corresponding box, Kronecker and outer products. 
+					</figcaption>
+					</figure>
+
+					To be able to take derivatives we have to essentially be able to have all the operations 
+					\[\mathrm{op}(\mathbf{A}, \mathbf{B})_{ijkl} = \mathbf{A}_{\sigma(i,j,k,l)_{1,2}} \mathbf{B}_{\sigma(i,j,k,l)_{3,4}}\]
+					where \(\sigma\) is a permutation of the indices.  It turns out that all such operations can be expressed
+					using the three operations \(\otimes\), \(\boxtimes\) and the outer product by inserting transpose operations as needed.
+					Together these operations satisfy a number of group properties and products between them also have nice properties.  Fox example
+					\[
+						(\mathbf{A} \otimes \mathbf{B})(\mathbf{C} \boxtimes \mathbf{D}) = (\mathbf{AC}) \boxtimes (\mathbf{BD}),
+					\]
+					\[
+						(\mathbf{A} \boxtimes \mathbf{B})(\mathbf{C} \boxtimes \mathbf{D}) = (\mathbf{AD}) \otimes (\mathbf{BC}),	
+					\]
+					\[
+						(\mathbf{A} \otimes \mathbf{B})(\mathbf{C} \boxtimes \mathbf{D}) = (\mathbf{AC}) \boxtimes (\mathbf{BD}),
+					\]
+					and 
+					\[ (\mathbf{A} \boxtimes \mathbf{B})(\mathbf{C} \otimes \mathbf{D}) = (\mathbf{AD}) \boxtimes (\mathbf{BC}).\]
+					Also, importantly the Kronecker and box products can be used for efficient vector products:
+					\[
+						(\mathbf{A} \otimes \mathbf{B})\mathrm{vec}(\mathbf{X}) = \mathrm{vec}(\mathbf{BXA}^\top),
+					\]
+					and 
+					\[
+					(\mathbf{A} \boxtimes \mathbf{B})\mathrm{vec}(\mathbf{X}) =  \mathrm{vec}(\mathbf{B}\mathbf{X}^\top\mathbf{A}^\top).
+					\]
+					
+					<h3> Further Reading </h3>
+					We could go on about this topic as there are numerous properties they satisfies and simple rules for derivative 
+					calculation that they satisfy, but if you are interested in how most fast matrix operations (matrix derivatives, 
+					Hessian inversion, the Fast Fourier Transform) can be described using these three operations it's best if you 
+					just read our papers on the matter.  The basic condensed paper is 
+					<a href="papers/matDiff.pdf">Efficient automatic differentiation of matrix functions</a>, and the more elaborate paper
+					is <a href="https://ieeexplore.ieee.org/abstract/document/6516015">Second order methods for optimizing convex matrix functions</a>.
+					</p>
+
+
+				</div>
+			</section>
+
+
 			<!-- Speech Separation -->
 			<section id="separation" class="three">
 				<div class="container">
 					<header>
 						<h2>Single Microphone Speech Separation</h2>
 					</header>
-
+					<p>	<blockquote>					
+						This work was a collaboration at IBM research with Steven Rennie (now Pryon), John Hershey (now Google DeepMind) 
+						and Trausti Kristjanson (now Amazon).
+						</p>
+						</blockquote><p>
 					<p>
-						This project was done at IBM research with Steven Rennie, John Hershey and Trausti Kristjanson 
-						in the era before neural networks ruled speech recognition.  
+						This project was done in the era before neural networks ruled speech recognition.  
 						At the core the idea was to simply use a standard speech recognition system (HMM/GMM) to 
 						search through the cartesian product of each persons word-lattice.  For best performance we
 						used acoustic models specific to each speaker when feasible and a fast approximate search 
@@ -545,6 +797,7 @@
 		</div>
 
 		<!-- Scripts -->
+		<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 		<script src="assets/js/jquery.min.js"></script>
 		<script src="assets/js/jquery.scrolly.min.js"></script>
 		<script src="assets/js/jquery.scrollex.min.js"></script>
